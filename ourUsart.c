@@ -6,15 +6,13 @@
 #define RCC_APB1Periph_USART3 ((uint32_t)(0x01<<18))
 
 void initGPIO(void);
-void USART3ReadInterrupt(void);
 
 void initCom( uint32_t baudRate){
 	initGPIO();
 	RCC->APB1ENR |= RCC_APB1Periph_USART3;
 	
-	USART3->BRR |= (16000000/(8*2*baudRate))<< 4; // Baud rate mantissa
-//	USART3->BRR |= 16*(16000000%(8*2*baudRate)); // Baudrate fraction*/
-	USART3->BRR |= 0x3;
+	USART3->BRR |= (16000000/(8*2*baudRate))<< 4; // Baudrate mantissa
+	USART3->BRR |= 0x3; // Baudrate fraction
 	
 	USART3->CR1 |= 0X01 << 13; // UE Usart enable
 	USART3->CR1 |= 0X01 << 2; // RE Read enable
@@ -40,7 +38,7 @@ void writeToUart(uint8_t *pMsg){
 	}
 }
 
-void USART3ReadInterrupt(){
+void ourUSART3Handler(){
 	if(USART3->SR & 0X01<<5){ // RXNE
 		uint8_t irakurri = USART3->DR;
 		writeToUart(&irakurri);
