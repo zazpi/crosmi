@@ -9,5 +9,7 @@ typedef enum e_Com {COM1,COM2} COM;
 void initCom(uint32_t baudRate);
 void writeToUart(uint8_t *pMsg);
 void ourUSART3Handler(void);
+void readFromUart (void);
+int getBidali (void);
 
 #endif

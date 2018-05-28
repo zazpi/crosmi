@@ -23,13 +23,14 @@ int main(){
 }
 
 void ADCcallback(uint16_t balioa){
-	if(balioa > maxBalioa)
-		maxBalioa = balioa;
-	if(++zikloak == ZIKLO_KOP){
-		writeToUart((uint8_t * )&maxBalioa);
-		maxBalioa = 0;
-		zikloak = 0;
-
+	if (getBidali() == 1) {		
+		if(balioa > maxBalioa)
+			maxBalioa = balioa;
+		if(++zikloak == ZIKLO_KOP){
+			writeToUart((uint8_t * )&maxBalioa);
+			maxBalioa = 0;
+			zikloak = 0;
+		}
 	}
 }
 

@@ -6,6 +6,8 @@
 #define RCC_APB1Periph_USART3 ((uint32_t)(0x01<<18))
 
 void initGPIO(void);
+uint8_t irakurri;
+int bidali = 0;
 
 void initCom( uint32_t baudRate){
 	initGPIO();
@@ -38,9 +40,19 @@ void writeToUart(uint8_t *pMsg){
 	}
 }
 
+void readFromUart () {
+	if (irakurri == 0xff) {
+		bidali = !bidali;
+	}
+}
+
+int getBidali (void) {
+	return bidali;
+}
+
 void ourUSART3Handler(){
 	if(USART3->SR & 0X01<<5){ // RXNE
-		uint8_t irakurri = USART3->DR;
-		writeToUart(&irakurri);
+		irakurri = USART3->DR;
+		readFromUart();
 	}
 }
