@@ -4,9 +4,16 @@
 #include <stdint.h>
 #include <stm32f407xx.h>
 
-void initADC(void);
+//Konfigurazioa
+void initADC(uint32_t timer2TRGO, uint32_t interrupzioa, uint32_t kanala);
+void switchADC(int piztu);
+
+//Datuak
+uint16_t getAzkenBalioa(void);
+uint16_t getBalioa(void);
+
+//Interrupzioa
 void ourADCHandler(void);
-uint32_t getBalioa(void);
-void setCallBack(void (*funtzioa)(uint16_t));
+void setADCCallBack(void (*funtzioa)(uint16_t));
 
 #endif
