@@ -22,6 +22,7 @@ void switchADC(int piztu){
 		ADC1 -> CR2 |= 0x01;
 	else
 		ADC1 -> CR2 &=  ~0x01;
+	azkenBalioa= 0;
 }
 
 void setADCCallBack(void (*funtzioa)(uint16_t)){

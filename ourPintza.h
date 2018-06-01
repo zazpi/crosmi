@@ -5,6 +5,7 @@
 #include <stm32f407xx.h>
 
 void initPintza(void);
+void powerPintza(uint32_t piztu);
 
 uint16_t getAzkenKontsumoa(void);
 // Interrupzioak

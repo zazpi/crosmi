@@ -6,6 +6,7 @@
 
 void initUsart3(uint32_t baudRate, uint32_t interrupzioak);
 
+uint32_t readBufferSize(void);
 // Interrupzioekin
 void writeUart3(uint8_t *mezua, uint32_t luzera);
 uint32_t readUart3(uint8_t *pMsg, uint32_t maxLen);

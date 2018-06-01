@@ -19,12 +19,22 @@ void pushBuffer(Buffer * buffer, uint8_t balioa){
 }
 
 uint8_t popBuffer(Buffer * buffer){
-	return buffer->buffer[--buffer->size];
+	uint8_t pop = buffer->buffer[0];
+	for(int i = 1; i < buffer->size;i++){
+		buffer->buffer[i-1] = buffer->buffer[i];
+	}
+	buffer->size--;
+	return pop;
+}
+
+uint32_t readBufferSize(){
+	return bufferIrakurri.size;
 }
 
 void initGPIOUsart3(void);
 void pushBuffer(Buffer * buffer, uint8_t balioa);
 uint8_t popBuffer(Buffer * buffer);
+
 
 /*
 / Usart 3 hasieratzen du.
@@ -46,8 +56,7 @@ void initUsart3(uint32_t baudRate, uint32_t interrupzioak){
 		USART3->CR1 |= 0X01 << 6;// TCIE Interrupzioa idatzi duenean
 	  NVIC->ISER[39/32] |= 0X01 << (39 % 32);
 	}
-	bufferIdatzi.size = 0;
-	bufferIrakurri.size = 0;
+
 }
 
 /*
@@ -60,7 +69,6 @@ void initGPIOUsart3(){
 	setGpioPinAF(GPIOD,8,7);
 	setGpioPinAF(GPIOD,9,7);
 }
-
 /*
 / Agindutako byte luzera bidaltzen du. 
 / Byte guztiak DR.ra kopiatu arte ez da funtzioa bukatzen
@@ -85,11 +93,11 @@ void writeByte(uint8_t  mezua){
 / Mezua bufferrera kopiatzen du ahal denean bidaltzeko
 */
 void writeUart3(uint8_t *mezua, uint32_t luzera){
-	while(luzera != 0 && bufferIdatzi.size != BUFFER_SIZE){
+	while(luzera != 0 && bufferIrakurri.size != BUFFER_SIZE){
 		pushBuffer(&bufferIdatzi, *mezua++);
 		luzera--;
 	}
-	writeByte(popBuffer(&bufferIrakurri));
+	writeByte(popBuffer(&bufferIdatzi));
 }
 
 /*
@@ -114,7 +122,6 @@ void ourUSART3Handler(){
 	uint32_t sr = USART3->SR;
 	if(sr & 0X01<<5){ // RXNE
 		uint8_t irakurri = USART3->DR;
-		//bufferRead[bufferReadSize++] = irakurri;
 		pushBuffer(&bufferIrakurri,irakurri);
 	}else if(sr & 0x01 << 6){ // TC
 		if(bufferIdatzi.size != 0){
