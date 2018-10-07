@@ -1,0 +1,123 @@
+\hypertarget{our_usart_8h}{}\section{our\+Usart.\+h File Reference}
+\label{our_usart_8h}\index{our\+Usart.\+h@{our\+Usart.\+h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include $<$stm32f407xx.\+h$>$}\\*
+Include dependency graph for our\+Usart.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{our_usart_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{our_usart_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{our_usart_8h_a8eefaab45f6957910461f0aed333ab2c}{init\+Usart3} (uint32\+\_\+t baud\+Rate, uint32\+\_\+t interrupzioak)
+\item 
+uint32\+\_\+t \hyperlink{our_usart_8h_a4794ef7159391d61499e9f16656255e9}{read\+Buffer\+Size} (void)
+\item 
+void \hyperlink{our_usart_8h_a243850802a547d297effa71eb4ea52aa}{write\+Uart3} (uint8\+\_\+t $\ast$mezua, uint32\+\_\+t luzera)
+\item 
+uint32\+\_\+t \hyperlink{our_usart_8h_a4f068b8be3856907f280f139907a25c3}{read\+Uart3} (uint8\+\_\+t $\ast$p\+Msg, uint32\+\_\+t max\+Len)
+\item 
+void \hyperlink{our_usart_8h_ab022f541e60a58ae01a8187332844406}{write\+Uart3\+Blocking} (uint8\+\_\+t $\ast$mezua, uint32\+\_\+t luzera)
+\item 
+void \hyperlink{our_usart_8h_adb51cfeefed512873e010a057ccb3c22}{write\+Byte} (uint8\+\_\+t mezua)
+\item 
+void \hyperlink{our_usart_8h_a86527d5272d5802e3ddd5dc520c92083}{our\+U\+S\+A\+R\+T3\+Handler} (void)
+\item 
+void \hyperlink{our_usart_8h_ac4ade44b3bb844f1d1fc2757451a0008}{write\+To\+Uart} (uint8\+\_\+t $\ast$p\+Msg)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{our\+Usart.\+h@{our\+Usart.\+h}!init\+Usart3@{init\+Usart3}}
+\index{init\+Usart3@{init\+Usart3}!our\+Usart.\+h@{our\+Usart.\+h}}
+\subsubsection[{\texorpdfstring{init\+Usart3(uint32\+\_\+t baud\+Rate, uint32\+\_\+t interrupzioak)}{initUsart3(uint32_t baudRate, uint32_t interrupzioak)}}]{\setlength{\rightskip}{0pt plus 5cm}void init\+Usart3 (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{baud\+Rate, }
+\item[{uint32\+\_\+t}]{interrupzioak}
+\end{DoxyParamCaption}
+)}\hypertarget{our_usart_8h_a8eefaab45f6957910461f0aed333ab2c}{}\label{our_usart_8h_a8eefaab45f6957910461f0aed333ab2c}
+Initializes Usart 3 with a given baudrate and optional configuration for interruption. 
+\begin{DoxyParams}{Parameters}
+{\em baudrate} & uint32\+\_\+t type specifies the baudrate of Usart.  interrupzioak\+: uint32\+\_\+t acts as a boolean to define whether is needed interrupion configuration. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+\index{our\+Usart.\+h@{our\+Usart.\+h}!our\+U\+S\+A\+R\+T3\+Handler@{our\+U\+S\+A\+R\+T3\+Handler}}
+\index{our\+U\+S\+A\+R\+T3\+Handler@{our\+U\+S\+A\+R\+T3\+Handler}!our\+Usart.\+h@{our\+Usart.\+h}}
+\subsubsection[{\texorpdfstring{our\+U\+S\+A\+R\+T3\+Handler(void)}{ourUSART3Handler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void our\+U\+S\+A\+R\+T3\+Handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{our_usart_8h_a86527d5272d5802e3ddd5dc520c92083}{}\label{our_usart_8h_a86527d5272d5802e3ddd5dc520c92083}
+\index{our\+Usart.\+h@{our\+Usart.\+h}!read\+Buffer\+Size@{read\+Buffer\+Size}}
+\index{read\+Buffer\+Size@{read\+Buffer\+Size}!our\+Usart.\+h@{our\+Usart.\+h}}
+\subsubsection[{\texorpdfstring{read\+Buffer\+Size(void)}{readBufferSize(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t read\+Buffer\+Size (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{our_usart_8h_a4794ef7159391d61499e9f16656255e9}{}\label{our_usart_8h_a4794ef7159391d61499e9f16656255e9}
+\index{our\+Usart.\+h@{our\+Usart.\+h}!read\+Uart3@{read\+Uart3}}
+\index{read\+Uart3@{read\+Uart3}!our\+Usart.\+h@{our\+Usart.\+h}}
+\subsubsection[{\texorpdfstring{read\+Uart3(uint8\+\_\+t $\ast$p\+Msg, uint32\+\_\+t max\+Len)}{readUart3(uint8_t *pMsg, uint32_t maxLen)}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t read\+Uart3 (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{p\+Msg, }
+\item[{uint32\+\_\+t}]{max\+Len}
+\end{DoxyParamCaption}
+)}\hypertarget{our_usart_8h_a4f068b8be3856907f280f139907a25c3}{}\label{our_usart_8h_a4f068b8be3856907f280f139907a25c3}
+\index{our\+Usart.\+h@{our\+Usart.\+h}!write\+Byte@{write\+Byte}}
+\index{write\+Byte@{write\+Byte}!our\+Usart.\+h@{our\+Usart.\+h}}
+\subsubsection[{\texorpdfstring{write\+Byte(uint8\+\_\+t mezua)}{writeByte(uint8_t mezua)}}]{\setlength{\rightskip}{0pt plus 5cm}void write\+Byte (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{mezua}
+\end{DoxyParamCaption}
+)}\hypertarget{our_usart_8h_adb51cfeefed512873e010a057ccb3c22}{}\label{our_usart_8h_adb51cfeefed512873e010a057ccb3c22}
+Writes one byte on data register (DR)  mezua\+: uint8\+\_\+t the message that needs to be written in the data register. \begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+\index{our\+Usart.\+h@{our\+Usart.\+h}!write\+To\+Uart@{write\+To\+Uart}}
+\index{write\+To\+Uart@{write\+To\+Uart}!our\+Usart.\+h@{our\+Usart.\+h}}
+\subsubsection[{\texorpdfstring{write\+To\+Uart(uint8\+\_\+t $\ast$p\+Msg)}{writeToUart(uint8_t *pMsg)}}]{\setlength{\rightskip}{0pt plus 5cm}void write\+To\+Uart (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{p\+Msg}
+\end{DoxyParamCaption}
+)}\hypertarget{our_usart_8h_ac4ade44b3bb844f1d1fc2757451a0008}{}\label{our_usart_8h_ac4ade44b3bb844f1d1fc2757451a0008}
+\index{our\+Usart.\+h@{our\+Usart.\+h}!write\+Uart3@{write\+Uart3}}
+\index{write\+Uart3@{write\+Uart3}!our\+Usart.\+h@{our\+Usart.\+h}}
+\subsubsection[{\texorpdfstring{write\+Uart3(uint8\+\_\+t $\ast$mezua, uint32\+\_\+t luzera)}{writeUart3(uint8_t *mezua, uint32_t luzera)}}]{\setlength{\rightskip}{0pt plus 5cm}void write\+Uart3 (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{mezua, }
+\item[{uint32\+\_\+t}]{luzera}
+\end{DoxyParamCaption}
+)}\hypertarget{our_usart_8h_a243850802a547d297effa71eb4ea52aa}{}\label{our_usart_8h_a243850802a547d297effa71eb4ea52aa}
+/ Copy the message to the buffer when it can. 
+\begin{DoxyParams}{Parameters}
+{\em mezua} & uint8\+\_\+t pointer holds the message value. \\
+\hline
+{\em luzera} & uint32\+\_\+t type the size of the message. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+\index{our\+Usart.\+h@{our\+Usart.\+h}!write\+Uart3\+Blocking@{write\+Uart3\+Blocking}}
+\index{write\+Uart3\+Blocking@{write\+Uart3\+Blocking}!our\+Usart.\+h@{our\+Usart.\+h}}
+\subsubsection[{\texorpdfstring{write\+Uart3\+Blocking(uint8\+\_\+t $\ast$mezua, uint32\+\_\+t luzera)}{writeUart3Blocking(uint8_t *mezua, uint32_t luzera)}}]{\setlength{\rightskip}{0pt plus 5cm}void write\+Uart3\+Blocking (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{mezua, }
+\item[{uint32\+\_\+t}]{luzera}
+\end{DoxyParamCaption}
+)}\hypertarget{our_usart_8h_ab022f541e60a58ae01a8187332844406}{}\label{our_usart_8h_ab022f541e60a58ae01a8187332844406}

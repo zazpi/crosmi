@@ -1,0 +1,79 @@
+\hypertarget{our_systick_8h}{}\section{our\+Systick.\+h File Reference}
+\label{our_systick_8h}\index{our\+Systick.\+h@{our\+Systick.\+h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include $<$stm32f407xx.\+h$>$}\\*
+Include dependency graph for our\+Systick.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{our_systick_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{our_systick_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{our_systick_8h_ac5ba5d23d61ca2e9a564ec6aad5221b4}{init\+Sys\+Tick} (uint32\+\_\+t ms, uint32\+\_\+t internal\+Clk)
+\item 
+uint32\+\_\+t \hyperlink{our_systick_8h_afa8f4dcf412151885ef146f574827b95}{get\+Sys\+Ticks} (void)
+\item 
+void \hyperlink{our_systick_8h_a19975fb04994a67d7ec95540d836b3dc}{wait\+Next\+Sys\+Tick} (void)
+\item 
+void \hyperlink{our_systick_8h_a1564f1e1bb9db6cffe092a31b7ee8c27}{our\+Sys\+Tick\+Handler} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{our\+Systick.\+h@{our\+Systick.\+h}!get\+Sys\+Ticks@{get\+Sys\+Ticks}}
+\index{get\+Sys\+Ticks@{get\+Sys\+Ticks}!our\+Systick.\+h@{our\+Systick.\+h}}
+\subsubsection[{\texorpdfstring{get\+Sys\+Ticks(void)}{getSysTicks(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t get\+Sys\+Ticks (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{our_systick_8h_afa8f4dcf412151885ef146f574827b95}{}\label{our_systick_8h_afa8f4dcf412151885ef146f574827b95}
+Get the current system tick value.  systicks\+: uint32\+\_\+t type ticks value. \index{our\+Systick.\+h@{our\+Systick.\+h}!init\+Sys\+Tick@{init\+Sys\+Tick}}
+\index{init\+Sys\+Tick@{init\+Sys\+Tick}!our\+Systick.\+h@{our\+Systick.\+h}}
+\subsubsection[{\texorpdfstring{init\+Sys\+Tick(uint32\+\_\+t ms, uint32\+\_\+t internal\+Clk)}{initSysTick(uint32_t ms, uint32_t internalClk)}}]{\setlength{\rightskip}{0pt plus 5cm}void init\+Sys\+Tick (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{ms, }
+\item[{uint32\+\_\+t}]{internal\+Clk}
+\end{DoxyParamCaption}
+)}\hypertarget{our_systick_8h_ac5ba5d23d61ca2e9a564ec6aad5221b4}{}\label{our_systick_8h_ac5ba5d23d61ca2e9a564ec6aad5221b4}
+Initializes the System Tick core peripheral. 
+\begin{DoxyParams}{Parameters}
+{\em ms} & uint32\+\_\+t type sets the milliseconds for the clock \\
+\hline
+{\em internal\+Clk} & uint32\+\_\+t type optional parameter, acts as a boolean to know whether internal clock is needed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+\index{our\+Systick.\+h@{our\+Systick.\+h}!our\+Sys\+Tick\+Handler@{our\+Sys\+Tick\+Handler}}
+\index{our\+Sys\+Tick\+Handler@{our\+Sys\+Tick\+Handler}!our\+Systick.\+h@{our\+Systick.\+h}}
+\subsubsection[{\texorpdfstring{our\+Sys\+Tick\+Handler(void)}{ourSysTickHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void our\+Sys\+Tick\+Handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{our_systick_8h_a1564f1e1bb9db6cffe092a31b7ee8c27}{}\label{our_systick_8h_a1564f1e1bb9db6cffe092a31b7ee8c27}
+Interruption handler for Sys\+Tick. \begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+\index{our\+Systick.\+h@{our\+Systick.\+h}!wait\+Next\+Sys\+Tick@{wait\+Next\+Sys\+Tick}}
+\index{wait\+Next\+Sys\+Tick@{wait\+Next\+Sys\+Tick}!our\+Systick.\+h@{our\+Systick.\+h}}
+\subsubsection[{\texorpdfstring{wait\+Next\+Sys\+Tick(void)}{waitNextSysTick(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void wait\+Next\+Sys\+Tick (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{our_systick_8h_a19975fb04994a67d7ec95540d836b3dc}{}\label{our_systick_8h_a19975fb04994a67d7ec95540d836b3dc}
+This function is used to count until the next system tick. \begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}

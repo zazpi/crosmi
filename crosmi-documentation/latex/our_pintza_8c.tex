@@ -1,0 +1,156 @@
+\hypertarget{our_pintza_8c}{}\section{our\+Pintza.\+c File Reference}
+\label{our_pintza_8c}\index{our\+Pintza.\+c@{our\+Pintza.\+c}}
+{\ttfamily \#include \char`\"{}our\+Pintza.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}our\+A\+D\+C.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}our\+Timer.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}our\+Rcc\+Gpio.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}our\+D\+M\+A.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}our\+D\+A\+C.\+h\char`\"{}}\\*
+Include dependency graph for our\+Pintza.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{our_pintza_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{our_pintza_8c_ae16276a6cb76cf1a1462573259174e2d}{Z\+I\+K\+L\+O\+\_\+\+K\+OP}~100
+\item 
+\#define \hyperlink{our_pintza_8c_adc88080d4f406a8f4cf0efe3c395688a}{T\+I\+M\+E\+R\+\_\+\+A\+B\+I\+A\+D\+U\+RA}~10
+\item 
+\#define \hyperlink{our_pintza_8c_a21005f9f4e2ce7597c5eb4351816d7e2}{O\+F\+F\+S\+ET}~(uint16\+\_\+t) 0x04d9
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{our_pintza_8c_a197488db1e4921e50419bde04a61b890}{A\+D\+Ccallback} (uint16\+\_\+t balioa)
+\item 
+void \hyperlink{our_pintza_8c_a9baabb03427960524df4a2fbb04f2e07}{init\+G\+P\+I\+O\+A6} (void)
+\item 
+void \hyperlink{our_pintza_8c_a62aa285aa159785a4686a5ac86ca8967}{init\+Pintza} (void)
+\item 
+void \hyperlink{our_pintza_8c_abb5ef8f5f79abfdadae9fd2de7d8ddb4}{power\+Pintza} (uint32\+\_\+t piztu)
+\item 
+uint16\+\_\+t \hyperlink{our_pintza_8c_a82fa6c5b99bf057573150a0609d8003c}{get\+Azken\+Kontsumoa} ()
+\item 
+void \hyperlink{our_pintza_8c_a071cd75f04cd5217e7cef31c901e2bee}{set\+Pintza\+Callback} (void($\ast$funtzioa)(uint16\+\_\+t))
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \hyperlink{our_pintza_8c_afbf22e2955f0f34f2c76f425ce6cf272}{max\+Balioa} = 0
+\item 
+uint32\+\_\+t \hyperlink{our_pintza_8c_a10f57d5c143288292b4a59f189b02c01}{zikloak} = 0
+\item 
+uint16\+\_\+t \hyperlink{our_pintza_8c_afe29f7be5c2ee604debe235d6e5eac72}{azken\+Max\+Balioa} = 0
+\item 
+void($\ast$ \hyperlink{our_pintza_8c_a652b2248682b933712868addf6195852}{callback\+Pintza} )(uint16\+\_\+t)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{our\+Pintza.\+c@{our\+Pintza.\+c}!O\+F\+F\+S\+ET@{O\+F\+F\+S\+ET}}
+\index{O\+F\+F\+S\+ET@{O\+F\+F\+S\+ET}!our\+Pintza.\+c@{our\+Pintza.\+c}}
+\subsubsection[{\texorpdfstring{O\+F\+F\+S\+ET}{OFFSET}}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\+F\+F\+S\+ET~(uint16\+\_\+t) 0x04d9}\hypertarget{our_pintza_8c_a21005f9f4e2ce7597c5eb4351816d7e2}{}\label{our_pintza_8c_a21005f9f4e2ce7597c5eb4351816d7e2}
+\index{our\+Pintza.\+c@{our\+Pintza.\+c}!T\+I\+M\+E\+R\+\_\+\+A\+B\+I\+A\+D\+U\+RA@{T\+I\+M\+E\+R\+\_\+\+A\+B\+I\+A\+D\+U\+RA}}
+\index{T\+I\+M\+E\+R\+\_\+\+A\+B\+I\+A\+D\+U\+RA@{T\+I\+M\+E\+R\+\_\+\+A\+B\+I\+A\+D\+U\+RA}!our\+Pintza.\+c@{our\+Pintza.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+E\+R\+\_\+\+A\+B\+I\+A\+D\+U\+RA}{TIMER_ABIADURA}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+I\+M\+E\+R\+\_\+\+A\+B\+I\+A\+D\+U\+RA~10}\hypertarget{our_pintza_8c_adc88080d4f406a8f4cf0efe3c395688a}{}\label{our_pintza_8c_adc88080d4f406a8f4cf0efe3c395688a}
+\index{our\+Pintza.\+c@{our\+Pintza.\+c}!Z\+I\+K\+L\+O\+\_\+\+K\+OP@{Z\+I\+K\+L\+O\+\_\+\+K\+OP}}
+\index{Z\+I\+K\+L\+O\+\_\+\+K\+OP@{Z\+I\+K\+L\+O\+\_\+\+K\+OP}!our\+Pintza.\+c@{our\+Pintza.\+c}}
+\subsubsection[{\texorpdfstring{Z\+I\+K\+L\+O\+\_\+\+K\+OP}{ZIKLO_KOP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Z\+I\+K\+L\+O\+\_\+\+K\+OP~100}\hypertarget{our_pintza_8c_ae16276a6cb76cf1a1462573259174e2d}{}\label{our_pintza_8c_ae16276a6cb76cf1a1462573259174e2d}
+
+
+\subsection{Function Documentation}
+\index{our\+Pintza.\+c@{our\+Pintza.\+c}!A\+D\+Ccallback@{A\+D\+Ccallback}}
+\index{A\+D\+Ccallback@{A\+D\+Ccallback}!our\+Pintza.\+c@{our\+Pintza.\+c}}
+\subsubsection[{\texorpdfstring{A\+D\+Ccallback(uint16\+\_\+t balioa)}{ADCcallback(uint16_t balioa)}}]{\setlength{\rightskip}{0pt plus 5cm}void A\+D\+Ccallback (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{balioa}
+\end{DoxyParamCaption}
+)}\hypertarget{our_pintza_8c_a197488db1e4921e50419bde04a61b890}{}\label{our_pintza_8c_a197488db1e4921e50419bde04a61b890}
+This function calculates the max value converted by the A\+DC. It waits for 3000 cycles and takes the max value. Used to take the peak value of the alternate current. And sets the max value to the callback function. 
+\begin{DoxyParams}{Parameters}
+{\em balio} & uint16\+\_\+t type current value converted by the A\+DC. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+\index{our\+Pintza.\+c@{our\+Pintza.\+c}!get\+Azken\+Kontsumoa@{get\+Azken\+Kontsumoa}}
+\index{get\+Azken\+Kontsumoa@{get\+Azken\+Kontsumoa}!our\+Pintza.\+c@{our\+Pintza.\+c}}
+\subsubsection[{\texorpdfstring{get\+Azken\+Kontsumoa()}{getAzkenKontsumoa()}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t get\+Azken\+Kontsumoa (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{our_pintza_8c_a82fa6c5b99bf057573150a0609d8003c}{}\label{our_pintza_8c_a82fa6c5b99bf057573150a0609d8003c}
+Gets the last value from the conversion made by A\+DC. \begin{DoxyReturn}{Returns}
+azken\+Balio\+: uint16\+\_\+t type last conversion value. 
+\end{DoxyReturn}
+\index{our\+Pintza.\+c@{our\+Pintza.\+c}!init\+G\+P\+I\+O\+A6@{init\+G\+P\+I\+O\+A6}}
+\index{init\+G\+P\+I\+O\+A6@{init\+G\+P\+I\+O\+A6}!our\+Pintza.\+c@{our\+Pintza.\+c}}
+\subsubsection[{\texorpdfstring{init\+G\+P\+I\+O\+A6(void)}{initGPIOA6(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void init\+G\+P\+I\+O\+A6 (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{our_pintza_8c_a9baabb03427960524df4a2fbb04f2e07}{}\label{our_pintza_8c_a9baabb03427960524df4a2fbb04f2e07}
+Initializes G\+P\+I\+O6 and sets its mode to Analog mode. \begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+\index{our\+Pintza.\+c@{our\+Pintza.\+c}!init\+Pintza@{init\+Pintza}}
+\index{init\+Pintza@{init\+Pintza}!our\+Pintza.\+c@{our\+Pintza.\+c}}
+\subsubsection[{\texorpdfstring{init\+Pintza(void)}{initPintza(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void init\+Pintza (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{our_pintza_8c_a62aa285aa159785a4686a5ac86ca8967}{}\label{our_pintza_8c_a62aa285aa159785a4686a5ac86ca8967}
+This function initializes some peripherals to work with an extern tool (pintza). Initializes G\+P\+I\+O6, Timer 2, A\+DC, D\+AC and D\+MA. \begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+\index{our\+Pintza.\+c@{our\+Pintza.\+c}!power\+Pintza@{power\+Pintza}}
+\index{power\+Pintza@{power\+Pintza}!our\+Pintza.\+c@{our\+Pintza.\+c}}
+\subsubsection[{\texorpdfstring{power\+Pintza(uint32\+\_\+t piztu)}{powerPintza(uint32_t piztu)}}]{\setlength{\rightskip}{0pt plus 5cm}void power\+Pintza (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{piztu}
+\end{DoxyParamCaption}
+)}\hypertarget{our_pintza_8c_abb5ef8f5f79abfdadae9fd2de7d8ddb4}{}\label{our_pintza_8c_abb5ef8f5f79abfdadae9fd2de7d8ddb4}
+This function enables or disables Timer2 and A\+DC depending on the given param. 
+\begin{DoxyParams}{Parameters}
+{\em piztu} & uint32\+\_\+t type acts as a boolean to enable or disable Timer 2 and A\+DC. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+\index{our\+Pintza.\+c@{our\+Pintza.\+c}!set\+Pintza\+Callback@{set\+Pintza\+Callback}}
+\index{set\+Pintza\+Callback@{set\+Pintza\+Callback}!our\+Pintza.\+c@{our\+Pintza.\+c}}
+\subsubsection[{\texorpdfstring{set\+Pintza\+Callback(void($\ast$funtzioa)(uint16\+\_\+t))}{setPintzaCallback(void(*funtzioa)(uint16_t))}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Pintza\+Callback (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(uint16\+\_\+t)}]{funtzioa}
+\end{DoxyParamCaption}
+)}\hypertarget{our_pintza_8c_a071cd75f04cd5217e7cef31c901e2bee}{}\label{our_pintza_8c_a071cd75f04cd5217e7cef31c901e2bee}
+Sets callback function that recieves the last value of the conversion as parameter. 
+\begin{DoxyParams}{Parameters}
+{\em funtzioa} & void type function, is a pointer to a void returning function which take uint16\+\_\+t type parameter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\index{our\+Pintza.\+c@{our\+Pintza.\+c}!azken\+Max\+Balioa@{azken\+Max\+Balioa}}
+\index{azken\+Max\+Balioa@{azken\+Max\+Balioa}!our\+Pintza.\+c@{our\+Pintza.\+c}}
+\subsubsection[{\texorpdfstring{azken\+Max\+Balioa}{azkenMaxBalioa}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t azken\+Max\+Balioa = 0}\hypertarget{our_pintza_8c_afe29f7be5c2ee604debe235d6e5eac72}{}\label{our_pintza_8c_afe29f7be5c2ee604debe235d6e5eac72}
+\index{our\+Pintza.\+c@{our\+Pintza.\+c}!callback\+Pintza@{callback\+Pintza}}
+\index{callback\+Pintza@{callback\+Pintza}!our\+Pintza.\+c@{our\+Pintza.\+c}}
+\subsubsection[{\texorpdfstring{callback\+Pintza}{callbackPintza}}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ callback\+Pintza) (uint16\+\_\+t)=0}\hypertarget{our_pintza_8c_a652b2248682b933712868addf6195852}{}\label{our_pintza_8c_a652b2248682b933712868addf6195852}
+\index{our\+Pintza.\+c@{our\+Pintza.\+c}!max\+Balioa@{max\+Balioa}}
+\index{max\+Balioa@{max\+Balioa}!our\+Pintza.\+c@{our\+Pintza.\+c}}
+\subsubsection[{\texorpdfstring{max\+Balioa}{maxBalioa}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t max\+Balioa = 0}\hypertarget{our_pintza_8c_afbf22e2955f0f34f2c76f425ce6cf272}{}\label{our_pintza_8c_afbf22e2955f0f34f2c76f425ce6cf272}
+\index{our\+Pintza.\+c@{our\+Pintza.\+c}!zikloak@{zikloak}}
+\index{zikloak@{zikloak}!our\+Pintza.\+c@{our\+Pintza.\+c}}
+\subsubsection[{\texorpdfstring{zikloak}{zikloak}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t zikloak = 0}\hypertarget{our_pintza_8c_a10f57d5c143288292b4a59f189b02c01}{}\label{our_pintza_8c_a10f57d5c143288292b4a59f189b02c01}

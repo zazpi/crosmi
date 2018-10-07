@@ -1,0 +1,105 @@
+\hypertarget{our_timer_8h}{}\section{our\+Timer.\+h File Reference}
+\label{our_timer_8h}\index{our\+Timer.\+h@{our\+Timer.\+h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include $<$stm32f407xx.\+h$>$}\\*
+Include dependency graph for our\+Timer.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{our_timer_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{our_timer_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{our_timer_8h_a4e742ad28873317354eb02338622cda4}{init\+Timer2} (uint32\+\_\+t ms, uint32\+\_\+t tr\+Go, uint32\+\_\+t interrupzioa)
+\item 
+void \hyperlink{our_timer_8h_aa7583a2b51bed765f33770ad8ec8b50e}{switch\+Timer2} (int piztu)
+\item 
+void \hyperlink{our_timer_8h_a984c824e117d7db294dc91fda4bb44f5}{wait\+Tick} (void)
+\item 
+uint32\+\_\+t \hyperlink{our_timer_8h_a4ac70252749c1e2a3006e0a76b5b9c6e}{get\+Ticks} (void)
+\item 
+void \hyperlink{our_timer_8h_a4d6ee62b5f61c89897eed1052296d104}{our\+Timer2\+Handler} (void)
+\item 
+void \hyperlink{our_timer_8h_a4b2ea4175a8cd1eb4d6934a46a69743f}{set\+Timer2\+Call\+Back} (void($\ast$funtzioa)(void))
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{our\+Timer.\+h@{our\+Timer.\+h}!get\+Ticks@{get\+Ticks}}
+\index{get\+Ticks@{get\+Ticks}!our\+Timer.\+h@{our\+Timer.\+h}}
+\subsubsection[{\texorpdfstring{get\+Ticks(void)}{getTicks(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t get\+Ticks (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{our_timer_8h_a4ac70252749c1e2a3006e0a76b5b9c6e}{}\label{our_timer_8h_a4ac70252749c1e2a3006e0a76b5b9c6e}
+\index{our\+Timer.\+h@{our\+Timer.\+h}!init\+Timer2@{init\+Timer2}}
+\index{init\+Timer2@{init\+Timer2}!our\+Timer.\+h@{our\+Timer.\+h}}
+\subsubsection[{\texorpdfstring{init\+Timer2(uint32\+\_\+t ms, uint32\+\_\+t tr\+Go, uint32\+\_\+t interrupzioa)}{initTimer2(uint32_t ms, uint32_t trGo, uint32_t interrupzioa)}}]{\setlength{\rightskip}{0pt plus 5cm}void init\+Timer2 (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{ms, }
+\item[{uint32\+\_\+t}]{tr\+Go, }
+\item[{uint32\+\_\+t}]{interrupzioa}
+\end{DoxyParamCaption}
+)}\hypertarget{our_timer_8h_a4e742ad28873317354eb02338622cda4}{}\label{our_timer_8h_a4e742ad28873317354eb02338622cda4}
+Initializes timer 2 setting basic configurations for launch. Some given paramaters such as tr\+Go and interrupzio are optional. 
+\begin{DoxyParams}{Parameters}
+{\em ms} & uint32\+\_\+t type time in millisecond above which timer 2 have to operate. \\
+\hline
+{\em tr\+Go} & uint32\+\_\+t acts as boolean to know whether is needed to enable T\+R\+GO signal. \\
+\hline
+{\em interrupzioa} & uint32\+\_\+t acts as a boolean to know whether interruption configuration is needed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+\index{our\+Timer.\+h@{our\+Timer.\+h}!our\+Timer2\+Handler@{our\+Timer2\+Handler}}
+\index{our\+Timer2\+Handler@{our\+Timer2\+Handler}!our\+Timer.\+h@{our\+Timer.\+h}}
+\subsubsection[{\texorpdfstring{our\+Timer2\+Handler(void)}{ourTimer2Handler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void our\+Timer2\+Handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{our_timer_8h_a4d6ee62b5f61c89897eed1052296d104}{}\label{our_timer_8h_a4d6ee62b5f61c89897eed1052296d104}
+Custom handler for Timer 2 interruption. \begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+\index{our\+Timer.\+h@{our\+Timer.\+h}!set\+Timer2\+Call\+Back@{set\+Timer2\+Call\+Back}}
+\index{set\+Timer2\+Call\+Back@{set\+Timer2\+Call\+Back}!our\+Timer.\+h@{our\+Timer.\+h}}
+\subsubsection[{\texorpdfstring{set\+Timer2\+Call\+Back(void($\ast$funtzioa)(void))}{setTimer2CallBack(void(*funtzioa)(void))}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Timer2\+Call\+Back (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(void)}]{funtzioa}
+\end{DoxyParamCaption}
+)}\hypertarget{our_timer_8h_a4b2ea4175a8cd1eb4d6934a46a69743f}{}\label{our_timer_8h_a4b2ea4175a8cd1eb4d6934a46a69743f}
+\index{our\+Timer.\+h@{our\+Timer.\+h}!switch\+Timer2@{switch\+Timer2}}
+\index{switch\+Timer2@{switch\+Timer2}!our\+Timer.\+h@{our\+Timer.\+h}}
+\subsubsection[{\texorpdfstring{switch\+Timer2(int piztu)}{switchTimer2(int piztu)}}]{\setlength{\rightskip}{0pt plus 5cm}void switch\+Timer2 (
+\begin{DoxyParamCaption}
+\item[{int}]{piztu}
+\end{DoxyParamCaption}
+)}\hypertarget{our_timer_8h_aa7583a2b51bed765f33770ad8ec8b50e}{}\label{our_timer_8h_aa7583a2b51bed765f33770ad8ec8b50e}
+Enables or disables the Timer 2 depending on the given parameter. 
+\begin{DoxyParams}{Parameters}
+{\em piztu} & uint32\+\_\+t type acts as a boolean to enable or disable the Timer 2. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+\index{our\+Timer.\+h@{our\+Timer.\+h}!wait\+Tick@{wait\+Tick}}
+\index{wait\+Tick@{wait\+Tick}!our\+Timer.\+h@{our\+Timer.\+h}}
+\subsubsection[{\texorpdfstring{wait\+Tick(void)}{waitTick(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void wait\+Tick (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{our_timer_8h_a984c824e117d7db294dc91fda4bb44f5}{}\label{our_timer_8h_a984c824e117d7db294dc91fda4bb44f5}

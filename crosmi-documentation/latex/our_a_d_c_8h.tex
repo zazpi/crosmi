@@ -1,0 +1,114 @@
+\hypertarget{our_a_d_c_8h}{}\section{our\+A\+D\+C.\+h File Reference}
+\label{our_a_d_c_8h}\index{our\+A\+D\+C.\+h@{our\+A\+D\+C.\+h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include $<$stm32f407xx.\+h$>$}\\*
+Include dependency graph for our\+A\+D\+C.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{our_a_d_c_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{our_a_d_c_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{our_a_d_c_8h_a717656252b7f23c44aee8c93d8781965}{init\+A\+DC} (uint32\+\_\+t timer2\+T\+R\+GO, uint32\+\_\+t interrupzioa, uint32\+\_\+t kanala)
+\item 
+void \hyperlink{our_a_d_c_8h_a21c5d304a223b06f835851d581cbd697}{switch\+A\+DC} (int piztu)
+\item 
+uint16\+\_\+t \hyperlink{our_a_d_c_8h_aab4d2a3904f8b634c2ead90d0066c740}{get\+Azken\+Balioa} (void)
+\item 
+uint16\+\_\+t \hyperlink{our_a_d_c_8h_a38923b0842879b8f18e204a2cec0e67a}{get\+Balioa} (void)
+\item 
+void \hyperlink{our_a_d_c_8h_aa54231074f0827327eb2147b9eeb5376}{our\+A\+D\+C\+Handler} (void)
+\item 
+void \hyperlink{our_a_d_c_8h_a443125cba6c904aa284362d5ff18d459}{set\+A\+D\+C\+Call\+Back} (void($\ast$funtzioa)(uint16\+\_\+t))
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{our\+A\+D\+C.\+h@{our\+A\+D\+C.\+h}!get\+Azken\+Balioa@{get\+Azken\+Balioa}}
+\index{get\+Azken\+Balioa@{get\+Azken\+Balioa}!our\+A\+D\+C.\+h@{our\+A\+D\+C.\+h}}
+\subsubsection[{\texorpdfstring{get\+Azken\+Balioa(void)}{getAzkenBalioa(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t get\+Azken\+Balioa (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{our_a_d_c_8h_aab4d2a3904f8b634c2ead90d0066c740}{}\label{our_a_d_c_8h_aab4d2a3904f8b634c2ead90d0066c740}
+Function that returns the last value of A\+DC. \begin{DoxyReturn}{Returns}
+azken\+Balioa\+: uint16\+\_\+t type A\+DC last value. 
+\end{DoxyReturn}
+\index{our\+A\+D\+C.\+h@{our\+A\+D\+C.\+h}!get\+Balioa@{get\+Balioa}}
+\index{get\+Balioa@{get\+Balioa}!our\+A\+D\+C.\+h@{our\+A\+D\+C.\+h}}
+\subsubsection[{\texorpdfstring{get\+Balioa(void)}{getBalioa(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t get\+Balioa (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{our_a_d_c_8h_a38923b0842879b8f18e204a2cec0e67a}{}\label{our_a_d_c_8h_a38923b0842879b8f18e204a2cec0e67a}
+This function return the last value. \begin{DoxyReturn}{Returns}
+azken\+Balioa\+: uint16\+\_\+t type conversion\textquotesingle{}s last value. 
+\end{DoxyReturn}
+\index{our\+A\+D\+C.\+h@{our\+A\+D\+C.\+h}!init\+A\+DC@{init\+A\+DC}}
+\index{init\+A\+DC@{init\+A\+DC}!our\+A\+D\+C.\+h@{our\+A\+D\+C.\+h}}
+\subsubsection[{\texorpdfstring{init\+A\+D\+C(uint32\+\_\+t timer2\+T\+R\+G\+O, uint32\+\_\+t interrupzioa, uint32\+\_\+t kanala)}{initADC(uint32_t timer2TRGO, uint32_t interrupzioa, uint32_t kanala)}}]{\setlength{\rightskip}{0pt plus 5cm}void init\+A\+DC (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{timer2\+T\+R\+GO, }
+\item[{uint32\+\_\+t}]{interrupzioa, }
+\item[{uint32\+\_\+t}]{kanala}
+\end{DoxyParamCaption}
+)}\hypertarget{our_a_d_c_8h_a717656252b7f23c44aee8c93d8781965}{}\label{our_a_d_c_8h_a717656252b7f23c44aee8c93d8781965}
+This function initializes A\+DC, setting core basic params to launch A\+DC. Some of the params are optional configurations such as interruption and T\+R\+GO. 
+\begin{DoxyParams}{Parameters}
+{\em timer2\+T\+R\+GO} & uint32\+\_\+t type but acts as a boolean to know if timer 2\textquotesingle{}s T\+R\+GO is needed. \\
+\hline
+{\em interrupzioa} & uint32\+\_\+t type but acts as boolean to know if interruption is needed. \\
+\hline
+{\em kanala} & uint32\+\_\+t type holds the value of which channel should be used by the A\+DC. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+\index{our\+A\+D\+C.\+h@{our\+A\+D\+C.\+h}!our\+A\+D\+C\+Handler@{our\+A\+D\+C\+Handler}}
+\index{our\+A\+D\+C\+Handler@{our\+A\+D\+C\+Handler}!our\+A\+D\+C.\+h@{our\+A\+D\+C.\+h}}
+\subsubsection[{\texorpdfstring{our\+A\+D\+C\+Handler(void)}{ourADCHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void our\+A\+D\+C\+Handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{our_a_d_c_8h_aa54231074f0827327eb2147b9eeb5376}{}\label{our_a_d_c_8h_aa54231074f0827327eb2147b9eeb5376}
+This function acts as a handler for the interruption caused by the A\+DC. \begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+\index{our\+A\+D\+C.\+h@{our\+A\+D\+C.\+h}!set\+A\+D\+C\+Call\+Back@{set\+A\+D\+C\+Call\+Back}}
+\index{set\+A\+D\+C\+Call\+Back@{set\+A\+D\+C\+Call\+Back}!our\+A\+D\+C.\+h@{our\+A\+D\+C.\+h}}
+\subsubsection[{\texorpdfstring{set\+A\+D\+C\+Call\+Back(void($\ast$funtzioa)(uint16\+\_\+t))}{setADCCallBack(void(*funtzioa)(uint16_t))}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+A\+D\+C\+Call\+Back (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(uint16\+\_\+t)}]{funtzioa}
+\end{DoxyParamCaption}
+)}\hypertarget{our_a_d_c_8h_a443125cba6c904aa284362d5ff18d459}{}\label{our_a_d_c_8h_a443125cba6c904aa284362d5ff18d459}
+This function sets a pointer to another function which accepts a paramater of type uint16\+\_\+t. Callback funtcion.  funtzio\+: void type points to a function. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{our\+A\+D\+C.\+h@{our\+A\+D\+C.\+h}!switch\+A\+DC@{switch\+A\+DC}}
+\index{switch\+A\+DC@{switch\+A\+DC}!our\+A\+D\+C.\+h@{our\+A\+D\+C.\+h}}
+\subsubsection[{\texorpdfstring{switch\+A\+D\+C(int piztu)}{switchADC(int piztu)}}]{\setlength{\rightskip}{0pt plus 5cm}void switch\+A\+DC (
+\begin{DoxyParamCaption}
+\item[{int}]{piztu}
+\end{DoxyParamCaption}
+)}\hypertarget{our_a_d_c_8h_a21c5d304a223b06f835851d581cbd697}{}\label{our_a_d_c_8h_a21c5d304a223b06f835851d581cbd697}
+This function enable or disable A\+DC peripheral depending on the given parameter that acts as a boolean type. 
+\begin{DoxyParams}{Parameters}
+{\em piztu} & int type but acts as a boolean to know whether is needed to enable or disable A\+D\+C1. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}

@@ -1,0 +1,158 @@
+\hypertarget{our_rcc_gpio_8h}{}\section{our\+Rcc\+Gpio.\+h File Reference}
+\label{our_rcc_gpio_8h}\index{our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include $<$stm32f407xx.\+h$>$}\\*
+Include dependency graph for our\+Rcc\+Gpio.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{our_rcc_gpio_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{our_rcc_gpio_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{our_rcc_gpio_8h_a5196856bff085276016540e4c9c1dcf3}{R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+\_\+\+G\+P\+I\+OA}~((uint32\+\_\+t)0x01)
+\item 
+\#define \hyperlink{our_rcc_gpio_8h_a41aceda5be7d382dd5fa321f5ca5c32f}{R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+\_\+\+G\+P\+I\+OC}~((uint32\+\_\+t)(0x01$<$$<$2))
+\item 
+\#define \hyperlink{our_rcc_gpio_8h_a8f2001b801c7fe584ea1f6e9ab5c3274}{R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+\_\+\+G\+P\+I\+OF}~((uint32\+\_\+t)(0x01$<$$<$5))
+\item 
+\#define \hyperlink{our_rcc_gpio_8h_a1d8fb07f858f198aaff77c71675f175d}{R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+\_\+\+G\+P\+I\+OD}~((uint32\+\_\+t)(0x01$<$$<$3))
+\item 
+\#define \hyperlink{our_rcc_gpio_8h_ac34a5382981f1c19834fde41f205cf06}{R\+C\+C\+\_\+\+A\+H\+B1\+A\+P\+B2\+Periph\+\_\+\+S\+Y\+S\+C\+FG}~((uint32\+\_\+t)(0x01$<$$<$14))
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{our_rcc_gpio_8h_aaba48df2a76dd7f822436358145cb6bb}{G\+P\+I\+O\+Mode\+\_\+\+Type} \{ \hyperlink{our_rcc_gpio_8h_aaba48df2a76dd7f822436358145cb6bba484aa18a6156ce916049b334ba1839de}{G\+P\+I\+O\+\_\+\+Mode\+\_\+\+IN} = 0x00, 
+\hyperlink{our_rcc_gpio_8h_aaba48df2a76dd7f822436358145cb6bba60f1d530f4119efcad8e1a68c890c6a6}{G\+P\+I\+O\+\_\+\+Mode\+\_\+\+O\+UT} = 0x01, 
+\hyperlink{our_rcc_gpio_8h_aaba48df2a76dd7f822436358145cb6bba6d44c35c6c5008d85bac9251a867e701}{G\+P\+I\+O\+\_\+\+Mode\+\_\+\+AF} = 0x02, 
+\hyperlink{our_rcc_gpio_8h_aaba48df2a76dd7f822436358145cb6bba6e5c0d7e6d2e22b834b24e1ca1d6d0db}{G\+P\+I\+O\+\_\+\+Mode\+\_\+\+AN} = 0x03
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{our_rcc_gpio_8h_ad0e3f7bff9289ce46ddaafb13ce19f3d}{R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+Clock\+Cmd} (uint32\+\_\+t n\+Periph, uint32\+\_\+t on)
+\item 
+void \hyperlink{our_rcc_gpio_8h_a7543dd4c0dc608ba3dfee05aa830de88}{R\+C\+C\+\_\+\+A\+H\+B1\+A\+P\+B2\+Periph\+Clock\+Cmd} (uint32\+\_\+t n\+Periph, uint32\+\_\+t on)
+\item 
+void \hyperlink{our_rcc_gpio_8h_a66c8c156cd83707b8f4ad11c0ceb0655}{init\+Gpio\+Pin\+Mode} (G\+P\+I\+O\+\_\+\+Type\+Def $\ast$, uint32\+\_\+t pin, \hyperlink{our_rcc_gpio_8h_aaba48df2a76dd7f822436358145cb6bb}{G\+P\+I\+O\+Mode\+\_\+\+Type} mode)
+\item 
+void \hyperlink{our_rcc_gpio_8h_a1061e5e9c03acdff3237cc0a58d75941}{togle\+Gpio\+Pin\+Value} (G\+P\+I\+O\+\_\+\+Type\+Def $\ast$, uint32\+\_\+t pin)
+\item 
+void \hyperlink{our_rcc_gpio_8h_ab9e87b45373664db189ad357cc73e403}{set\+Gpio\+Pin\+Value} (G\+P\+I\+O\+\_\+\+Type\+Def $\ast$, uint32\+\_\+t pin, uint32\+\_\+t value)
+\item 
+uint32\+\_\+t \hyperlink{our_rcc_gpio_8h_a65ed28fa329a76aac1a927b07044f120}{get\+Gpio\+Pin\+Value} (G\+P\+I\+O\+\_\+\+Type\+Def $\ast$, uint32\+\_\+t pin)
+\item 
+void \hyperlink{our_rcc_gpio_8h_a00402e8c2c926e493d0a1399fc7cf765}{set\+Gpio\+Pin\+AF} (G\+P\+I\+O\+\_\+\+Type\+Def $\ast$gpio, uint32\+\_\+t pin, uint32\+\_\+t AF)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}!R\+C\+C\+\_\+\+A\+H\+B1\+A\+P\+B2\+Periph\+\_\+\+S\+Y\+S\+C\+FG@{R\+C\+C\+\_\+\+A\+H\+B1\+A\+P\+B2\+Periph\+\_\+\+S\+Y\+S\+C\+FG}}
+\index{R\+C\+C\+\_\+\+A\+H\+B1\+A\+P\+B2\+Periph\+\_\+\+S\+Y\+S\+C\+FG@{R\+C\+C\+\_\+\+A\+H\+B1\+A\+P\+B2\+Periph\+\_\+\+S\+Y\+S\+C\+FG}!our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}}
+\subsubsection[{\texorpdfstring{R\+C\+C\+\_\+\+A\+H\+B1\+A\+P\+B2\+Periph\+\_\+\+S\+Y\+S\+C\+FG}{RCC_AHB1APB2Periph_SYSCFG}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+C\+C\+\_\+\+A\+H\+B1\+A\+P\+B2\+Periph\+\_\+\+S\+Y\+S\+C\+FG~((uint32\+\_\+t)(0x01$<$$<$14))}\hypertarget{our_rcc_gpio_8h_ac34a5382981f1c19834fde41f205cf06}{}\label{our_rcc_gpio_8h_ac34a5382981f1c19834fde41f205cf06}
+\index{our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}!R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+\_\+\+G\+P\+I\+OA@{R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+\_\+\+G\+P\+I\+OA}}
+\index{R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+\_\+\+G\+P\+I\+OA@{R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+\_\+\+G\+P\+I\+OA}!our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}}
+\subsubsection[{\texorpdfstring{R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+\_\+\+G\+P\+I\+OA}{RCC_AHB1Periph_GPIOA}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+\_\+\+G\+P\+I\+OA~((uint32\+\_\+t)0x01)}\hypertarget{our_rcc_gpio_8h_a5196856bff085276016540e4c9c1dcf3}{}\label{our_rcc_gpio_8h_a5196856bff085276016540e4c9c1dcf3}
+\index{our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}!R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+\_\+\+G\+P\+I\+OC@{R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+\_\+\+G\+P\+I\+OC}}
+\index{R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+\_\+\+G\+P\+I\+OC@{R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+\_\+\+G\+P\+I\+OC}!our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}}
+\subsubsection[{\texorpdfstring{R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+\_\+\+G\+P\+I\+OC}{RCC_AHB1Periph_GPIOC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+\_\+\+G\+P\+I\+OC~((uint32\+\_\+t)(0x01$<$$<$2))}\hypertarget{our_rcc_gpio_8h_a41aceda5be7d382dd5fa321f5ca5c32f}{}\label{our_rcc_gpio_8h_a41aceda5be7d382dd5fa321f5ca5c32f}
+\index{our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}!R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+\_\+\+G\+P\+I\+OD@{R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+\_\+\+G\+P\+I\+OD}}
+\index{R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+\_\+\+G\+P\+I\+OD@{R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+\_\+\+G\+P\+I\+OD}!our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}}
+\subsubsection[{\texorpdfstring{R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+\_\+\+G\+P\+I\+OD}{RCC_AHB1Periph_GPIOD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+\_\+\+G\+P\+I\+OD~((uint32\+\_\+t)(0x01$<$$<$3))}\hypertarget{our_rcc_gpio_8h_a1d8fb07f858f198aaff77c71675f175d}{}\label{our_rcc_gpio_8h_a1d8fb07f858f198aaff77c71675f175d}
+\index{our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}!R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+\_\+\+G\+P\+I\+OF@{R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+\_\+\+G\+P\+I\+OF}}
+\index{R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+\_\+\+G\+P\+I\+OF@{R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+\_\+\+G\+P\+I\+OF}!our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}}
+\subsubsection[{\texorpdfstring{R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+\_\+\+G\+P\+I\+OF}{RCC_AHB1Periph_GPIOF}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+\_\+\+G\+P\+I\+OF~((uint32\+\_\+t)(0x01$<$$<$5))}\hypertarget{our_rcc_gpio_8h_a8f2001b801c7fe584ea1f6e9ab5c3274}{}\label{our_rcc_gpio_8h_a8f2001b801c7fe584ea1f6e9ab5c3274}
+
+
+\subsection{Enumeration Type Documentation}
+\index{our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}!G\+P\+I\+O\+Mode\+\_\+\+Type@{G\+P\+I\+O\+Mode\+\_\+\+Type}}
+\index{G\+P\+I\+O\+Mode\+\_\+\+Type@{G\+P\+I\+O\+Mode\+\_\+\+Type}!our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}}
+\subsubsection[{\texorpdfstring{G\+P\+I\+O\+Mode\+\_\+\+Type}{GPIOMode_Type}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf G\+P\+I\+O\+Mode\+\_\+\+Type}}\hypertarget{our_rcc_gpio_8h_aaba48df2a76dd7f822436358145cb6bb}{}\label{our_rcc_gpio_8h_aaba48df2a76dd7f822436358145cb6bb}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{G\+P\+I\+O\+\_\+\+Mode\+\_\+\+IN@{G\+P\+I\+O\+\_\+\+Mode\+\_\+\+IN}!our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}}\index{our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}!G\+P\+I\+O\+\_\+\+Mode\+\_\+\+IN@{G\+P\+I\+O\+\_\+\+Mode\+\_\+\+IN}}\item[{\em 
+G\+P\+I\+O\+\_\+\+Mode\+\_\+\+IN\hypertarget{our_rcc_gpio_8h_aaba48df2a76dd7f822436358145cb6bba484aa18a6156ce916049b334ba1839de}{}\label{our_rcc_gpio_8h_aaba48df2a76dd7f822436358145cb6bba484aa18a6156ce916049b334ba1839de}
+}]G\+P\+IO Input Mode \index{G\+P\+I\+O\+\_\+\+Mode\+\_\+\+O\+UT@{G\+P\+I\+O\+\_\+\+Mode\+\_\+\+O\+UT}!our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}}\index{our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}!G\+P\+I\+O\+\_\+\+Mode\+\_\+\+O\+UT@{G\+P\+I\+O\+\_\+\+Mode\+\_\+\+O\+UT}}\item[{\em 
+G\+P\+I\+O\+\_\+\+Mode\+\_\+\+O\+UT\hypertarget{our_rcc_gpio_8h_aaba48df2a76dd7f822436358145cb6bba60f1d530f4119efcad8e1a68c890c6a6}{}\label{our_rcc_gpio_8h_aaba48df2a76dd7f822436358145cb6bba60f1d530f4119efcad8e1a68c890c6a6}
+}]G\+P\+IO Output Mode \index{G\+P\+I\+O\+\_\+\+Mode\+\_\+\+AF@{G\+P\+I\+O\+\_\+\+Mode\+\_\+\+AF}!our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}}\index{our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}!G\+P\+I\+O\+\_\+\+Mode\+\_\+\+AF@{G\+P\+I\+O\+\_\+\+Mode\+\_\+\+AF}}\item[{\em 
+G\+P\+I\+O\+\_\+\+Mode\+\_\+\+AF\hypertarget{our_rcc_gpio_8h_aaba48df2a76dd7f822436358145cb6bba6d44c35c6c5008d85bac9251a867e701}{}\label{our_rcc_gpio_8h_aaba48df2a76dd7f822436358145cb6bba6d44c35c6c5008d85bac9251a867e701}
+}]G\+P\+IO Alternate function Mode \index{G\+P\+I\+O\+\_\+\+Mode\+\_\+\+AN@{G\+P\+I\+O\+\_\+\+Mode\+\_\+\+AN}!our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}}\index{our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}!G\+P\+I\+O\+\_\+\+Mode\+\_\+\+AN@{G\+P\+I\+O\+\_\+\+Mode\+\_\+\+AN}}\item[{\em 
+G\+P\+I\+O\+\_\+\+Mode\+\_\+\+AN\hypertarget{our_rcc_gpio_8h_aaba48df2a76dd7f822436358145cb6bba6e5c0d7e6d2e22b834b24e1ca1d6d0db}{}\label{our_rcc_gpio_8h_aaba48df2a76dd7f822436358145cb6bba6e5c0d7e6d2e22b834b24e1ca1d6d0db}
+}]G\+P\+IO Analog Mode \end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\index{our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}!get\+Gpio\+Pin\+Value@{get\+Gpio\+Pin\+Value}}
+\index{get\+Gpio\+Pin\+Value@{get\+Gpio\+Pin\+Value}!our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}}
+\subsubsection[{\texorpdfstring{get\+Gpio\+Pin\+Value(\+G\+P\+I\+O\+\_\+\+Type\+Def $\ast$, uint32\+\_\+t pin)}{getGpioPinValue(GPIO_TypeDef *, uint32_t pin)}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t get\+Gpio\+Pin\+Value (
+\begin{DoxyParamCaption}
+\item[{G\+P\+I\+O\+\_\+\+Type\+Def $\ast$}]{, }
+\item[{uint32\+\_\+t}]{pin}
+\end{DoxyParamCaption}
+)}\hypertarget{our_rcc_gpio_8h_a65ed28fa329a76aac1a927b07044f120}{}\label{our_rcc_gpio_8h_a65ed28fa329a76aac1a927b07044f120}
+\index{our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}!init\+Gpio\+Pin\+Mode@{init\+Gpio\+Pin\+Mode}}
+\index{init\+Gpio\+Pin\+Mode@{init\+Gpio\+Pin\+Mode}!our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}}
+\subsubsection[{\texorpdfstring{init\+Gpio\+Pin\+Mode(\+G\+P\+I\+O\+\_\+\+Type\+Def $\ast$, uint32\+\_\+t pin, G\+P\+I\+O\+Mode\+\_\+\+Type mode)}{initGpioPinMode(GPIO_TypeDef *, uint32_t pin, GPIOMode_Type mode)}}]{\setlength{\rightskip}{0pt plus 5cm}void init\+Gpio\+Pin\+Mode (
+\begin{DoxyParamCaption}
+\item[{G\+P\+I\+O\+\_\+\+Type\+Def $\ast$}]{, }
+\item[{uint32\+\_\+t}]{pin, }
+\item[{{\bf G\+P\+I\+O\+Mode\+\_\+\+Type}}]{mode}
+\end{DoxyParamCaption}
+)}\hypertarget{our_rcc_gpio_8h_a66c8c156cd83707b8f4ad11c0ceb0655}{}\label{our_rcc_gpio_8h_a66c8c156cd83707b8f4ad11c0ceb0655}
+\index{our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}!R\+C\+C\+\_\+\+A\+H\+B1\+A\+P\+B2\+Periph\+Clock\+Cmd@{R\+C\+C\+\_\+\+A\+H\+B1\+A\+P\+B2\+Periph\+Clock\+Cmd}}
+\index{R\+C\+C\+\_\+\+A\+H\+B1\+A\+P\+B2\+Periph\+Clock\+Cmd@{R\+C\+C\+\_\+\+A\+H\+B1\+A\+P\+B2\+Periph\+Clock\+Cmd}!our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}}
+\subsubsection[{\texorpdfstring{R\+C\+C\+\_\+\+A\+H\+B1\+A\+P\+B2\+Periph\+Clock\+Cmd(uint32\+\_\+t n\+Periph, uint32\+\_\+t on)}{RCC_AHB1APB2PeriphClockCmd(uint32_t nPeriph, uint32_t on)}}]{\setlength{\rightskip}{0pt plus 5cm}void R\+C\+C\+\_\+\+A\+H\+B1\+A\+P\+B2\+Periph\+Clock\+Cmd (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{n\+Periph, }
+\item[{uint32\+\_\+t}]{on}
+\end{DoxyParamCaption}
+)}\hypertarget{our_rcc_gpio_8h_a7543dd4c0dc608ba3dfee05aa830de88}{}\label{our_rcc_gpio_8h_a7543dd4c0dc608ba3dfee05aa830de88}
+\index{our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}!R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+Clock\+Cmd@{R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+Clock\+Cmd}}
+\index{R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+Clock\+Cmd@{R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+Clock\+Cmd}!our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}}
+\subsubsection[{\texorpdfstring{R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+Clock\+Cmd(uint32\+\_\+t n\+Periph, uint32\+\_\+t on)}{RCC_AHB1PeriphClockCmd(uint32_t nPeriph, uint32_t on)}}]{\setlength{\rightskip}{0pt plus 5cm}void R\+C\+C\+\_\+\+A\+H\+B1\+Periph\+Clock\+Cmd (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{n\+Periph, }
+\item[{uint32\+\_\+t}]{on}
+\end{DoxyParamCaption}
+)}\hypertarget{our_rcc_gpio_8h_ad0e3f7bff9289ce46ddaafb13ce19f3d}{}\label{our_rcc_gpio_8h_ad0e3f7bff9289ce46ddaafb13ce19f3d}
+\index{our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}!set\+Gpio\+Pin\+AF@{set\+Gpio\+Pin\+AF}}
+\index{set\+Gpio\+Pin\+AF@{set\+Gpio\+Pin\+AF}!our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}}
+\subsubsection[{\texorpdfstring{set\+Gpio\+Pin\+A\+F(\+G\+P\+I\+O\+\_\+\+Type\+Def $\ast$gpio, uint32\+\_\+t pin, uint32\+\_\+t A\+F)}{setGpioPinAF(GPIO_TypeDef *gpio, uint32_t pin, uint32_t AF)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Gpio\+Pin\+AF (
+\begin{DoxyParamCaption}
+\item[{G\+P\+I\+O\+\_\+\+Type\+Def $\ast$}]{gpio, }
+\item[{uint32\+\_\+t}]{pin, }
+\item[{uint32\+\_\+t}]{AF}
+\end{DoxyParamCaption}
+)}\hypertarget{our_rcc_gpio_8h_a00402e8c2c926e493d0a1399fc7cf765}{}\label{our_rcc_gpio_8h_a00402e8c2c926e493d0a1399fc7cf765}
+\index{our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}!set\+Gpio\+Pin\+Value@{set\+Gpio\+Pin\+Value}}
+\index{set\+Gpio\+Pin\+Value@{set\+Gpio\+Pin\+Value}!our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}}
+\subsubsection[{\texorpdfstring{set\+Gpio\+Pin\+Value(\+G\+P\+I\+O\+\_\+\+Type\+Def $\ast$, uint32\+\_\+t pin, uint32\+\_\+t value)}{setGpioPinValue(GPIO_TypeDef *, uint32_t pin, uint32_t value)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Gpio\+Pin\+Value (
+\begin{DoxyParamCaption}
+\item[{G\+P\+I\+O\+\_\+\+Type\+Def $\ast$}]{, }
+\item[{uint32\+\_\+t}]{pin, }
+\item[{uint32\+\_\+t}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{our_rcc_gpio_8h_ab9e87b45373664db189ad357cc73e403}{}\label{our_rcc_gpio_8h_ab9e87b45373664db189ad357cc73e403}
+\index{our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}!togle\+Gpio\+Pin\+Value@{togle\+Gpio\+Pin\+Value}}
+\index{togle\+Gpio\+Pin\+Value@{togle\+Gpio\+Pin\+Value}!our\+Rcc\+Gpio.\+h@{our\+Rcc\+Gpio.\+h}}
+\subsubsection[{\texorpdfstring{togle\+Gpio\+Pin\+Value(\+G\+P\+I\+O\+\_\+\+Type\+Def $\ast$, uint32\+\_\+t pin)}{togleGpioPinValue(GPIO_TypeDef *, uint32_t pin)}}]{\setlength{\rightskip}{0pt plus 5cm}void togle\+Gpio\+Pin\+Value (
+\begin{DoxyParamCaption}
+\item[{G\+P\+I\+O\+\_\+\+Type\+Def $\ast$}]{, }
+\item[{uint32\+\_\+t}]{pin}
+\end{DoxyParamCaption}
+)}\hypertarget{our_rcc_gpio_8h_a1061e5e9c03acdff3237cc0a58d75941}{}\label{our_rcc_gpio_8h_a1061e5e9c03acdff3237cc0a58d75941}

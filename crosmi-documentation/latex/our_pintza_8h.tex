@@ -1,0 +1,101 @@
+\hypertarget{our_pintza_8h}{}\section{our\+Pintza.\+h File Reference}
+\label{our_pintza_8h}\index{our\+Pintza.\+h@{our\+Pintza.\+h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include $<$stm32f407xx.\+h$>$}\\*
+Include dependency graph for our\+Pintza.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{our_pintza_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{our_pintza_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{our_pintza_8h_a62aa285aa159785a4686a5ac86ca8967}{init\+Pintza} (void)
+\item 
+void \hyperlink{our_pintza_8h_abb5ef8f5f79abfdadae9fd2de7d8ddb4}{power\+Pintza} (uint32\+\_\+t piztu)
+\item 
+uint16\+\_\+t \hyperlink{our_pintza_8h_afba47c27a1a9ff05e11dda920353819a}{get\+Azken\+Kontsumoa} (void)
+\item 
+void \hyperlink{our_pintza_8h_a071cd75f04cd5217e7cef31c901e2bee}{set\+Pintza\+Callback} (void($\ast$funtzioa)(uint16\+\_\+t))
+\item 
+void \hyperlink{our_pintza_8h_a197488db1e4921e50419bde04a61b890}{A\+D\+Ccallback} (uint16\+\_\+t balioa)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{our\+Pintza.\+h@{our\+Pintza.\+h}!A\+D\+Ccallback@{A\+D\+Ccallback}}
+\index{A\+D\+Ccallback@{A\+D\+Ccallback}!our\+Pintza.\+h@{our\+Pintza.\+h}}
+\subsubsection[{\texorpdfstring{A\+D\+Ccallback(uint16\+\_\+t balioa)}{ADCcallback(uint16_t balioa)}}]{\setlength{\rightskip}{0pt plus 5cm}void A\+D\+Ccallback (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{balioa}
+\end{DoxyParamCaption}
+)}\hypertarget{our_pintza_8h_a197488db1e4921e50419bde04a61b890}{}\label{our_pintza_8h_a197488db1e4921e50419bde04a61b890}
+This function calculates the max value converted by the A\+DC. It waits for 3000 cycles and takes the max value. Used to take the peak value of the alternate current. And sets the max value to the callback function. 
+\begin{DoxyParams}{Parameters}
+{\em balio} & uint16\+\_\+t type current value converted by the A\+DC. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+\index{our\+Pintza.\+h@{our\+Pintza.\+h}!get\+Azken\+Kontsumoa@{get\+Azken\+Kontsumoa}}
+\index{get\+Azken\+Kontsumoa@{get\+Azken\+Kontsumoa}!our\+Pintza.\+h@{our\+Pintza.\+h}}
+\subsubsection[{\texorpdfstring{get\+Azken\+Kontsumoa(void)}{getAzkenKontsumoa(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t get\+Azken\+Kontsumoa (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{our_pintza_8h_afba47c27a1a9ff05e11dda920353819a}{}\label{our_pintza_8h_afba47c27a1a9ff05e11dda920353819a}
+Gets the last value from the conversion made by A\+DC. \begin{DoxyReturn}{Returns}
+azken\+Balio\+: uint16\+\_\+t type last conversion value. 
+\end{DoxyReturn}
+\index{our\+Pintza.\+h@{our\+Pintza.\+h}!init\+Pintza@{init\+Pintza}}
+\index{init\+Pintza@{init\+Pintza}!our\+Pintza.\+h@{our\+Pintza.\+h}}
+\subsubsection[{\texorpdfstring{init\+Pintza(void)}{initPintza(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void init\+Pintza (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{our_pintza_8h_a62aa285aa159785a4686a5ac86ca8967}{}\label{our_pintza_8h_a62aa285aa159785a4686a5ac86ca8967}
+This function initializes some peripherals to work with an extern tool (pintza). Initializes G\+P\+I\+O6, Timer 2, A\+DC, D\+AC and D\+MA. \begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+\index{our\+Pintza.\+h@{our\+Pintza.\+h}!power\+Pintza@{power\+Pintza}}
+\index{power\+Pintza@{power\+Pintza}!our\+Pintza.\+h@{our\+Pintza.\+h}}
+\subsubsection[{\texorpdfstring{power\+Pintza(uint32\+\_\+t piztu)}{powerPintza(uint32_t piztu)}}]{\setlength{\rightskip}{0pt plus 5cm}void power\+Pintza (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{piztu}
+\end{DoxyParamCaption}
+)}\hypertarget{our_pintza_8h_abb5ef8f5f79abfdadae9fd2de7d8ddb4}{}\label{our_pintza_8h_abb5ef8f5f79abfdadae9fd2de7d8ddb4}
+This function enables or disables Timer2 and A\+DC depending on the given param. 
+\begin{DoxyParams}{Parameters}
+{\em piztu} & uint32\+\_\+t type acts as a boolean to enable or disable Timer 2 and A\+DC. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+\index{our\+Pintza.\+h@{our\+Pintza.\+h}!set\+Pintza\+Callback@{set\+Pintza\+Callback}}
+\index{set\+Pintza\+Callback@{set\+Pintza\+Callback}!our\+Pintza.\+h@{our\+Pintza.\+h}}
+\subsubsection[{\texorpdfstring{set\+Pintza\+Callback(void($\ast$funtzioa)(uint16\+\_\+t))}{setPintzaCallback(void(*funtzioa)(uint16_t))}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Pintza\+Callback (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(uint16\+\_\+t)}]{funtzioa}
+\end{DoxyParamCaption}
+)}\hypertarget{our_pintza_8h_a071cd75f04cd5217e7cef31c901e2bee}{}\label{our_pintza_8h_a071cd75f04cd5217e7cef31c901e2bee}
+Sets callback function that recieves the last value of the conversion as parameter. 
+\begin{DoxyParams}{Parameters}
+{\em funtzioa} & void type function, is a pointer to a void returning function which take uint16\+\_\+t type parameter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}

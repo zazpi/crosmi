@@ -1,0 +1,86 @@
+\hypertarget{our_systick_8c}{}\section{our\+Systick.\+c File Reference}
+\label{our_systick_8c}\index{our\+Systick.\+c@{our\+Systick.\+c}}
+{\ttfamily \#include \char`\"{}our\+Systick.\+h\char`\"{}}\\*
+Include dependency graph for our\+Systick.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{our_systick_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{our_systick_8c_ac5ba5d23d61ca2e9a564ec6aad5221b4}{init\+Sys\+Tick} (uint32\+\_\+t ms, uint32\+\_\+t internal\+Clk)
+\item 
+uint32\+\_\+t \hyperlink{our_systick_8c_afa8f4dcf412151885ef146f574827b95}{get\+Sys\+Ticks} (void)
+\item 
+void \hyperlink{our_systick_8c_a19975fb04994a67d7ec95540d836b3dc}{wait\+Next\+Sys\+Tick} (void)
+\item 
+void \hyperlink{our_systick_8c_a1564f1e1bb9db6cffe092a31b7ee8c27}{our\+Sys\+Tick\+Handler} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{our_systick_8c_ab9553772b4f58c24099f93aefe737100}{systicks} = 0
+\item 
+uint32\+\_\+t \hyperlink{our_systick_8c_ac3d00ec354cdb669d5b5768ec40429ac}{systick\+Old} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{our\+Systick.\+c@{our\+Systick.\+c}!get\+Sys\+Ticks@{get\+Sys\+Ticks}}
+\index{get\+Sys\+Ticks@{get\+Sys\+Ticks}!our\+Systick.\+c@{our\+Systick.\+c}}
+\subsubsection[{\texorpdfstring{get\+Sys\+Ticks(void)}{getSysTicks(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t get\+Sys\+Ticks (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{our_systick_8c_afa8f4dcf412151885ef146f574827b95}{}\label{our_systick_8c_afa8f4dcf412151885ef146f574827b95}
+Get the current system tick value.  systicks\+: uint32\+\_\+t type ticks value. \index{our\+Systick.\+c@{our\+Systick.\+c}!init\+Sys\+Tick@{init\+Sys\+Tick}}
+\index{init\+Sys\+Tick@{init\+Sys\+Tick}!our\+Systick.\+c@{our\+Systick.\+c}}
+\subsubsection[{\texorpdfstring{init\+Sys\+Tick(uint32\+\_\+t ms, uint32\+\_\+t internal\+Clk)}{initSysTick(uint32_t ms, uint32_t internalClk)}}]{\setlength{\rightskip}{0pt plus 5cm}void init\+Sys\+Tick (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{ms, }
+\item[{uint32\+\_\+t}]{internal\+Clk}
+\end{DoxyParamCaption}
+)}\hypertarget{our_systick_8c_ac5ba5d23d61ca2e9a564ec6aad5221b4}{}\label{our_systick_8c_ac5ba5d23d61ca2e9a564ec6aad5221b4}
+Initializes the System Tick core peripheral. 
+\begin{DoxyParams}{Parameters}
+{\em ms} & uint32\+\_\+t type sets the milliseconds for the clock \\
+\hline
+{\em internal\+Clk} & uint32\+\_\+t type optional parameter, acts as a boolean to know whether internal clock is needed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+\index{our\+Systick.\+c@{our\+Systick.\+c}!our\+Sys\+Tick\+Handler@{our\+Sys\+Tick\+Handler}}
+\index{our\+Sys\+Tick\+Handler@{our\+Sys\+Tick\+Handler}!our\+Systick.\+c@{our\+Systick.\+c}}
+\subsubsection[{\texorpdfstring{our\+Sys\+Tick\+Handler(void)}{ourSysTickHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void our\+Sys\+Tick\+Handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{our_systick_8c_a1564f1e1bb9db6cffe092a31b7ee8c27}{}\label{our_systick_8c_a1564f1e1bb9db6cffe092a31b7ee8c27}
+Interruption handler for Sys\+Tick. \begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+\index{our\+Systick.\+c@{our\+Systick.\+c}!wait\+Next\+Sys\+Tick@{wait\+Next\+Sys\+Tick}}
+\index{wait\+Next\+Sys\+Tick@{wait\+Next\+Sys\+Tick}!our\+Systick.\+c@{our\+Systick.\+c}}
+\subsubsection[{\texorpdfstring{wait\+Next\+Sys\+Tick(void)}{waitNextSysTick(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void wait\+Next\+Sys\+Tick (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{our_systick_8c_a19975fb04994a67d7ec95540d836b3dc}{}\label{our_systick_8c_a19975fb04994a67d7ec95540d836b3dc}
+This function is used to count until the next system tick. \begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\index{our\+Systick.\+c@{our\+Systick.\+c}!systick\+Old@{systick\+Old}}
+\index{systick\+Old@{systick\+Old}!our\+Systick.\+c@{our\+Systick.\+c}}
+\subsubsection[{\texorpdfstring{systick\+Old}{systickOld}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t systick\+Old = 0}\hypertarget{our_systick_8c_ac3d00ec354cdb669d5b5768ec40429ac}{}\label{our_systick_8c_ac3d00ec354cdb669d5b5768ec40429ac}
+\index{our\+Systick.\+c@{our\+Systick.\+c}!systicks@{systicks}}
+\index{systicks@{systicks}!our\+Systick.\+c@{our\+Systick.\+c}}
+\subsubsection[{\texorpdfstring{systicks}{systicks}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t systicks = 0}\hypertarget{our_systick_8c_ab9553772b4f58c24099f93aefe737100}{}\label{our_systick_8c_ab9553772b4f58c24099f93aefe737100}
